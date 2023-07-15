@@ -1,6 +1,6 @@
 # Curso de Fundamentos de Angular
 
-**Instalar Node.JS desde**: https://nodejs.org/es
+**[Instalar Node.JS](https://nodejs.org/es)**:
 
 **Comando para verificar la versión de Node.JS:**  
 `node -v`
@@ -26,4 +26,3 @@ otra alternativa es
 
 **Comando para ejecutar el proyecto de Angular e indicarle el puerto por el cual se requiere iniciar:**  
 `ng serve -o --port=3500`
-
