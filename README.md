@@ -13,6 +13,7 @@
 
 **Comando para verificar la versión del  cliente de comando de Angular instalado:**
 `ng version`
+(Este comando ejecutado dentro de la carpeta del proyecto indica las versiones y las dependencias del proyecto)
 
 **Comando para crear proyecto nuevo en Angular:**
 ng new NombreDelProyecto
@@ -20,3 +21,9 @@ ng new NombreDelProyecto
 
  **Comando para ejecutar el proyecto de Angular creado:**
 `ng serve --open`
+otra alternativa es
+`ng serve -o`
+
+**Comando para ejecutar el proyecto de Angular e indicarle el puerto por el cual se requiere iniciar:**
+`ng serve -o --port=3500`
+
