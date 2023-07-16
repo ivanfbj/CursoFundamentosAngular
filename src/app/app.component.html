@@ -1,4 +1,18 @@
 <hr />
+<!-- Clase 8 - Introducción al Event Binding de Angular -->
+<!-- A lo igual que el Property Binding nos permite modificar el valor de los atributos
+  de los elementos HTML desde el controlador, el Event Binding permite controlar
+  los eventos que suceden en estos elementos.
+  El clic de un botón, detectar cambios en un campo, el envío de un formulario,
+  entre otros eventos.
+  Para esto utiliza los paréntesis () para el bindeo de la propiedad del elemento. -->
+<h1>Eventos</h1>
+<button [disabled]="btnDisabled">Enviar</button>
+<button (click)="toggleButton()">Activar/Desactivar botón</button>
+<p>Edad {{ person.age }}</p>
+<button (click)="increaseAge()">Edad ++</button>
+<button (click)="decreasedAge()" [disabled]="btnDisabledDecreaseAge">Edad --</button>
+<hr />
 <!-- Clase 7 - Property Binding -->
 <!-- Property Binding es la manera que dispone Angular para controlar y modificar
   las propiedades de los distintos elementos de HTML.

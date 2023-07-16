@@ -34,10 +34,36 @@ export class AppComponent {
   age = 18;
   img = 'https://source.unsplash.com/random';
   btnDisabled = true;
+  btnDisabledDecreaseAge = false;
 
   person = {
     name: 'Camila',
     age: 18,
     avatar: 'https://www.w3schools.com/howto/img_avatar.png'
   };
+
+  // Clase 8 - Introducción al Event Binding de Angular
+  toggleButton(){
+    this.btnDisabled = !this.btnDisabled;
+  }
+
+  validarEdad(age: number){
+    if (age == 0) {
+      this.btnDisabledDecreaseAge  = true;
+    } else {
+      this.btnDisabledDecreaseAge  = false;
+    }
+  }
+
+  increaseAge(){
+    this.person.age += 1;
+    this.validarEdad(this.person.age);
+  }
+
+  decreasedAge(){
+    this.person.age -= 1;
+    this.validarEdad(this.person.age);
+
+
+  }
 }
