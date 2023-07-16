@@ -1,4 +1,30 @@
 <hr />
+<!-- Clase 13 - *ngFor para arrays -->
+<!-- Puedes utilizar *ngFor para iterar y mostrar cada propiedad de un objeto.-->
+<h1>*ngFor para arrays</h1>
+<div>
+  <div *ngFor="let product of products">
+    <img width="250" [src]="product.image">
+    <h2>{{ product.price}}</h2>
+    <p>{{ product.name }}</p>
+  </div>
+</div>
+<hr />
+<!-- Clase 12 - Uso de *ngFor -->
+<!-- Al igual que con un If, Angular permite iterar un array de números,
+de cadenas de caracteres o de objetos usando “*ngFor”.Si tienes en tu componente un array de datos: -->
+<h1>*ngFor</h1>
+<input type="text" required [(ngModel)]="newName" />
+<button (click)="addName()">Agregar Nombre</button>
+<ul>
+  <li *ngIf="names.length === 0">La lista está vacía</li>
+  <li *ngFor="let name of names; index as posicion">
+    {{ posicion }} - {{ name }}
+    <button (click)="deleteName(posicion)">Eliminar Nombre</button>
+  </li>
+</ul>
+
+<hr />
 <!-- Clase 11 - Uso de *ngIf -->
 <!--El condicional “If” es un “If” en Javascript, en Java, en PHP, en Python o en cualquier lenguaje.
   Angular posibilita utilizar este condicionante embebido en el HTML para mostrar o no un elemento.
