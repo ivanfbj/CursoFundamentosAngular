@@ -130,7 +130,13 @@ export class AppComponent {
 
   // Clase 17 - Class and style
   widthImg = 10;
-  
+
+  // Clase 18 - NgClass y NgStyle
+  box = {
+    width: 100,
+    height: 100,
+    background: 'red'
+  }
 }
 
 

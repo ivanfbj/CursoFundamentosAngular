@@ -1,4 +1,55 @@
 <hr />
+<!-- Clase 18 - NgClass y NgStyle-->
+<!-- Con el binding de [class] y [style] puedes agregar clases y estilos fácilmente. Pero se vuelve algo complicado en el caso de que necesites agregar varias clases o modificar muchos estilos. Es por esto que Angular ofrece las directivas ngClass y ngStyle para este propósito.
+
+Puedes bindear la directiva [ngStyle] o [ngClass] y pasarle un objeto con cada propiedad o clase que deseas agregar:
+
+<p
+    [ngStyle]="{
+        'color': textColor,
+        'background': textBackground
+    }"
+></p>
+
+El operador ternario será tu mejor aliado para agregar o quitar clases y estilos:
+
+<div
+    [ngClass]="isAvailable ? 'active-class' : 'deactivate-class'"
+></div>
+
+O puedes usar las Interpolaciones en lugar del binding:
+
+<p
+    ngClass="{{ isAvailable ? 'active-class' : 'deactivate-class' }}"
+></p> -->
+<h1>NgClass & NgStyle</h1>
+<input type="text" required #nameInput4="ngModel" [(ngModel)]="person.name" />
+<hr class="line-error"
+[ngClass]="{
+  'valid': nameInput4.valid,
+  'invalid': nameInput4.invalid
+}"
+/>
+<p class="message-error" [class.activarCampo]="nameInput4.invalid">
+  El campo es requerido
+</p>
+<div class="styles">
+  <div>
+    <input type="number" [(ngModel)]="box.width" />
+    <input type="number" [(ngModel)]="box.height" />
+    <input type="color" [(ngModel)]="box.background" />
+  </div>
+  <div>
+    <div [ngStyle]="{
+    'width.px': box.width,
+    'height.px': box.height,
+    'background-color': box.background,
+    'display': 'block'
+    }"></div>
+  </div>
+</div>
+
+<hr />
 <!-- Clase 17 - Class and style -->
 <!--
 Class binding
@@ -26,7 +77,7 @@ puedes emplear un operador ternario para cambiar el color del párrafo.
 -->
 <h1>Class & Style</h1>
 <input type="text" required #nameInput2="ngModel" [(ngModel)]="person.name" />
-<p class="message-error" [class.activarCampo]="nameInput.invalid">
+<p class="message-error" [class.activarCampo]="nameInput2.invalid">
   El campo es requerido
 </p>
 <label>Nombre</label>
