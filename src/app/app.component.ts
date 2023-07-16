@@ -43,27 +43,37 @@ export class AppComponent {
   };
 
   // Clase 8 - Introducción al Event Binding de Angular
-  toggleButton(){
+  toggleButton() {
     this.btnDisabled = !this.btnDisabled;
   }
 
-  validarEdad(age: number){
+  validarEdad(age: number) {
     if (age == 0) {
-      this.btnDisabledDecreaseAge  = true;
+      this.btnDisabledDecreaseAge = true;
     } else {
-      this.btnDisabledDecreaseAge  = false;
+      this.btnDisabledDecreaseAge = false;
     }
   }
 
-  increaseAge(){
+  increaseAge() {
     this.person.age += 1;
     this.validarEdad(this.person.age);
   }
 
-  decreasedAge(){
+  decreasedAge() {
     this.person.age -= 1;
     this.validarEdad(this.person.age);
+  }
 
+  // Clase 9 - Otros eventos que puedes escuchar
+  // En este caso el parametro de entrada es un evento nativo del elemento html para poder interactuar con sus funcionalidades
+  onScroll(event: Event) {
+    const element = event.target as HTMLElement;
+    console.log(element.scrollTop);
+  }
 
+  changeName(event: Event) {
+    const element = event.target as HTMLInputElement;
+    this.person.name = element.value;
   }
 }

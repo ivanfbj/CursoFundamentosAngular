@@ -1,4 +1,47 @@
 <hr />
+<!-- Clase 9 - Otros eventos que puedes escuchar-->
+<!--
+  Además del evento clic, seguramente el más utilizado, hay otros eventos como el change para detectar
+  cambios en un campo de formulario, el evento scroll para detectar el desplazamiento horizontal/vertical
+  del usuario en el navegador, onKeyUp o onKeyDown para detectar cuando el usuario aprieta o deja de apretar un botón de su teclado.
+
+La importancia del Event Binding en Angular está dada por la posibilidad de comunicar el componente y la vista,
+el código TS con el código HTML, intercambiando datos entre ellos.
+
+Puedes enviarle al controlador el evento completo que se produce en la vista.
+Para esto, solo declara un parámetro $event en el método que se encuentra escuchando el evento.
+
+Tienes en el controlador:
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss']
+})
+export class AppComponent {
+  buttonClick(event: Event) {
+    console.log($event);
+  }
+}
+
+Y en el HTML:
+
+<button (onKeyUp)="buttonClick($event)">
+El método buttonClick() que recibe como parámetro $event del tipo Event, en el HTML bindea el evento onKeyUp y el método recibe argumento $event con el símbolo de pesos delante para que Angular entienda que se trata de un evento.
+
+De esta manera, puedes registrar cada pulsación del teclado imprimiendo por consola el evento producido por el usuario.
+-->
+<div class="box" (scroll)="onScroll($event)">
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores repellat optio, voluptates quaerat omnis
+  laudantium. Quasi placeat distinctio quas quae provident nihil. Obcaecati odit accusantium aliquam illum voluptates
+  numquam fuga?
+  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias, iusto facilis eos eius ea exercitationem repellat et
+  maiores quibusdam non corrupti fugit vel veniam repellendus perspiciatis qui! Suscipit, recusandae placeat.
+  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam, error provident accusamus harum alias voluptatum
+  totam tenetur quod, facilis eum nihil mollitia cumque ea? Nisi tempora dignissimos dolore dolor voluptatibus.
+</div>
+<input type="text" [value]="person.name" (keyup)="changeName($event)">
+<p>Nombre: {{ person.name }}</p>
+<hr />
 <!-- Clase 8 - Introducción al Event Binding de Angular -->
 <!-- A lo igual que el Property Binding nos permite modificar el valor de los atributos
   de los elementos HTML desde el controlador, el Event Binding permite controlar
