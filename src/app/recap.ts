@@ -1,4 +1,4 @@
-// Clase 4 - Conceptos básicos de TypeScript para usar Angular
+// Clase 5 - Conceptos básicos de TypeScript para usar Angular
 
 // Se puede declara una variable sin idicar el tipo de datos de la variable.
 const username = 'ivanfbj';
