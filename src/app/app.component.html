@@ -36,9 +36,9 @@
 <!-- Clase 13 - *ngFor para arrays -->
 <!-- Puedes utilizar *ngFor para iterar y mostrar cada propiedad de un objeto.-->
 <h1>*ngFor para arrays</h1>
-<div>
+<div class="products--grid">
   <div *ngFor="let product of products">
-    <img width="250" [src]="product.image">
+    <img [src]="product.image">
     <h2>{{ product.price}}</h2>
     <p>{{ product.name }}</p>
   </div>
@@ -246,4 +246,4 @@ que fue declarada en el componente, osea en el archivo app.component.ts -->
 <h3>Hola, Soy {{ name }} y tengo {{ age }}</h3>
 
 <!-- El string interpolation también sirve para configurar atributos del HTML -->
-<img src={{img}} alt="image">
+<img width="200" src={{img}} alt="image">

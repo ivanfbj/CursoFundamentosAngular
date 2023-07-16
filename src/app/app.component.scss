@@ -4,3 +4,47 @@
   overflow: auto;
   background: red;
 }
+
+// Clase 16 - Estilos a la lista de productos
+// .products--grid {
+//   display: grid;
+//   grid-template-columns: repeat(5, 1fr);
+//   grid-gap: 15px;
+
+//   div {
+//     img {
+//       width: 100%;
+//       border-radius: 15px;
+//     }
+//     h2, p {
+//       margin: 0;
+//     }
+//   }
+// }
+// Primero se piensa y se diseña para dispositivos moviles y luego para web
+.products--grid {
+  display: flex;
+  flex-direction: column;
+
+  div {
+    img {
+      width: 100%;
+      border-radius: 15px;
+    }
+
+    h2,
+    p {
+      margin: 0;
+    }
+  }
+}
+
+// Se crea un media query para adaptar el cambio a web
+// Medida de Tablet en adelante
+@media screen and (min-width: 40em) {
+  .products--grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 15px;
+  }
+}
