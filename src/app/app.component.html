@@ -1,4 +1,38 @@
 <hr />
+<!-- Clase 14 - Uso de ngSwitch -->
+<!-- Angular también ofrece la sentencia *ngSwitch y *ngSwitchCase
+  para determinar el flujo de control de tu aplicación y qué elemento
+  mostrar entre multiples elementos HTML. Además de utilizar un elemento
+  default con *ngSwitchDefault en caso de que ninguna condición se cumpla. -->
+<h1>ngSwitch</h1>
+<input type="text" required [(ngModel)]="person.name" />
+<!-- <p *ngIf="person.name == 'nicolas'">
+  El nombre ingresado es nicolas
+</p>
+
+<p *ngIf="person.name == 'julian'">
+  El nombre ingresado es julian
+</p>
+
+<p *ngIf="person.name == 'camilo'">
+  El nombre ingresado es camilo
+</p> -->
+<div [ngSwitch]="person.name">
+  <p *ngSwitchCase="'nicolas'">
+    El nombre ingresado es nicolas
+  </p>
+
+  <p *ngSwitchCase="'julian'">
+    El nombre ingresado es julian
+  </p>
+
+  <p *ngSwitchCase="'camilo'">
+    El nombre ingresado es camilo
+  </p>
+  <p *ngSwitchDefault>No hace match</p>
+</div>
+
+<hr />
 <!-- Clase 13 - *ngFor para arrays -->
 <!-- Puedes utilizar *ngFor para iterar y mostrar cada propiedad de un objeto.-->
 <h1>*ngFor para arrays</h1>
