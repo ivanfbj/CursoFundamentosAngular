@@ -1,4 +1,56 @@
 <hr />
+<!-- Clase 10 - Data binding con ngModel -->
+<!-- El atributo ngModel permite el intercambio de datos de forma bidireccional entre el componente y la vista.
+  Lo que suceda en el componente, se verá reflejado en la vista. Lo que se suceda en la vista,
+  inmediatamente impactará en el componente.
+
+<input [(ngModel)]="name">
+
+ngModel usar tanto los corchetes [] como los paréntesis (). De esta manera,
+se vuelve bidireccional el intercambio de datos. Si no quieres la bidirección,
+solo colocamos los corchetes [ngModel] para que la comunicación sea unidireccional.
+Para utilizar ngModel, es necesario hacer uso e importar Angular Forms. Para esto,
+dirígete al archivo app.module.ts que es el módulo principal de toda aplicación Angular y agrega lo siguiente:
+
+...
+import { FormsModule } from '@angular/forms';
+
+@NgModule({
+  declarations: [ ... ],
+  imports: [
+    FormsModule
+  ],
+  providers: [],
+  bootstrap: [ ... ]
+})
+export class AppModule { }
+
+De esta manera puedes importar el módulo FormsModule desde @angular/forms y agregarlo a imports para emplear la propiedad [(ngModel)]. -->
+<h1>NgModel</h1>
+<p>Nombre: {{ person.name }}</p>
+<input type="text" required #nameInput="ngModel" [(ngModel)]="person.name"/>
+<!-- Esto es una forma de mezclar el Event Binding y el Property Binding,
+el modulo de FormsModule que se importó en el archivo "app.module.ts",
+es el que permite pasar de:
+"<input type="text" [value]="person.name" (keyup)="changeName($event)">"
+a "<input type="text" [(ngModel)]="person.name"/>" -->
+
+<!-- Con el "ngModel" me da un estado de si la propiedas es valida o no
+para eso se debe crear una variable que esta en el Template del input
+y se le debe de indicar que el valor lo toma del "NgModel" esto se hace con
+"#nameInput="ngModel"" -->
+<!-- NgModel trabaja mucho con la forma nativa de manejar los input de HTML,
+por lo cual se pueden colocar validaciones nativas de HTML, como por ejemplo si el campo
+requerido o no
+Esto se logra colocando la propiedad "required"
+-->
+<p>Nombre Válido: {{ nameInput.valid}}</p>
+
+<p>Edad: {{ person.age }}</p>
+<input type="number" max="18" min="10" required #ageInput="ngModel" [(ngModel)]="person.age"/>
+<p>Edad Válida: {{ ageInput.valid}}</p>
+<hr />
+
 <!-- Clase 9 - Otros eventos que puedes escuchar-->
 <!--
   Además del evento clic, seguramente el más utilizado, hay otros eventos como el change para detectar
