@@ -33,4 +33,11 @@ export class AppComponent {
   name = 'Ivan';
   age = 18;
   img = 'https://source.unsplash.com/random';
+  btnDisabled = true;
+
+  person = {
+    name: 'Camila',
+    age: 18,
+    avatar: 'https://www.w3schools.com/howto/img_avatar.png'
+  };
 }
