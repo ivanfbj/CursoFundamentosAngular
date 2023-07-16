@@ -127,4 +127,11 @@ export class AppComponent {
       image: './assets/images/glasses.jpg'
     }
   ]
+
+  // Clase 17 - Class and style
+  widthImg = 10;
+  
 }
+
+
+

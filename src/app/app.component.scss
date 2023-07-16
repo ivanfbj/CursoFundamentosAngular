@@ -48,3 +48,20 @@
     grid-gap: 15px;
   }
 }
+
+// Clase 17 - Class and style
+.message-error {
+  background: red;
+  color: white;
+  opacity: 0;
+  transition: all linear .5s;
+
+  &.activarCampo {
+    opacity: 1;
+  }
+}
+
+.styles {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
