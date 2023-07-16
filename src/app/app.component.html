@@ -30,6 +30,7 @@ El método buttonClick() que recibe como parámetro $event del tipo Event, en el
 
 De esta manera, puedes registrar cada pulsación del teclado imprimiendo por consola el evento producido por el usuario.
 -->
+<h1>Otros Eventos</h1>
 <div class="box" (scroll)="onScroll($event)">
   Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores repellat optio, voluptates quaerat omnis
   laudantium. Quasi placeat distinctio quas quae provident nihil. Obcaecati odit accusantium aliquam illum voluptates
@@ -39,7 +40,9 @@ De esta manera, puedes registrar cada pulsación del teclado imprimiendo por con
   Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam, error provident accusamus harum alias voluptatum
   totam tenetur quod, facilis eum nihil mollitia cumque ea? Nisi tempora dignissimos dolore dolor voluptatibus.
 </div>
+<p>Valor Scroll Top: {{ valueScrollTop }}</p>
 <input type="text" [value]="person.name" (keyup)="changeName($event)">
+
 <p>Nombre: {{ person.name }}</p>
 <hr />
 <!-- Clase 8 - Introducción al Event Binding de Angular -->

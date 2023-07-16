@@ -67,8 +67,10 @@ export class AppComponent {
 
   // Clase 9 - Otros eventos que puedes escuchar
   // En este caso el parametro de entrada es un evento nativo del elemento html para poder interactuar con sus funcionalidades
+  valueScrollTop: number = -1;
   onScroll(event: Event) {
     const element = event.target as HTMLElement;
+    this.valueScrollTop = element.scrollTop;
     console.log(element.scrollTop);
   }
 
