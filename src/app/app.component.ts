@@ -43,6 +43,7 @@ export class AppComponent {
     avatar: 'https://www.w3schools.com/howto/img_avatar.png'
   };
 
+  // Curso de Fundamentos de Angular
   // Clase 8 - Introducción al Event Binding de Angular
   toggleButton() {
     this.btnDisabled = !this.btnDisabled;
@@ -66,6 +67,7 @@ export class AppComponent {
     this.validarEdad(this.person.age);
   }
 
+  // Curso de Fundamentos de Angular
   // Clase 9 - Otros eventos que puedes escuchar
   // En este caso el parametro de entrada es un evento nativo del elemento html para poder interactuar con sus funcionalidades
   valueScrollTop: number = -1;
@@ -80,6 +82,7 @@ export class AppComponent {
     this.person.name = element.value;
   }
 
+  // Curso de Fundamentos de Angular
   // Clase 12 - Uso de *ngFor
   names: string[] = ['Nico', 'Juli', 'Santi']
   newName = '';
@@ -93,6 +96,7 @@ export class AppComponent {
     this.names.splice(index, 1);
   }
 
+  // Curso de Fundamentos de Angular
   // Clase 13 - *ngFor para arrays
   products: Product[] = [
     {
@@ -128,9 +132,11 @@ export class AppComponent {
     }
   ]
 
+  // Curso de Fundamentos de Angular
   // Clase 17 - Class and style
   widthImg = 10;
 
+  // Curso de Fundamentos de Angular
   // Clase 18 - NgClass y NgStyle
   box = {
     width: 100,
@@ -138,6 +144,7 @@ export class AppComponent {
     background: 'red'
   }
 
+  // Curso de Fundamentos de Angular
   // Clase 19 - Crear un formulario
   register = {
     name: '',
@@ -145,6 +152,7 @@ export class AppComponent {
     password: ''
   }
 
+  // Curso de Fundamentos de Angular
   // Clase 19 - Crear un formulario
   onRegister(){
     console.log(this.register);

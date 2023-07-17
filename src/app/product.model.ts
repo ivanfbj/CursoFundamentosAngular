@@ -1,3 +1,4 @@
+// Curso de Fundamentos de Angular
 // Clase 13 - *ngFor para arrays
 export interface Product {
   name: string;
