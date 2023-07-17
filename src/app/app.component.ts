@@ -137,6 +137,19 @@ export class AppComponent {
     height: 100,
     background: 'red'
   }
+
+  // Clase 19 - Crear un formulario
+  register = {
+    name: '',
+    email: '',
+    password: ''
+  }
+
+  // Clase 19 - Crear un formulario
+  onRegister(){
+    console.log(this.register);
+    window.alert('El usuario se a registrado exitosamente');
+  }
 }
 
 
