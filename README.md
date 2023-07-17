@@ -39,3 +39,17 @@ ___
 - Inyección de dependencias
 - Consumo de datos provenientes de una API
 - Pipes y Directivas
+
+**Componente en Angular:**
+
+Un componente es una pieza de software con una responsabilidad única y una estructura y funcionalidad determinada, además de ser reutilizable.  
+
+Es una manera de dividir tu aplicación de una forma escalable para no tener todo en un solo archivo. Por ejemplo, un componente para el header, otro para el footer, uno más para el menú, etc.  
+
+Componentes en Angular
+Puedes crear tu primer componente en Angular utilizando el comando  
+`ng generate component nombreComponente`  
+o en su forma corta  
+`ng g c nombreComponente`  
+Para este proyecto el ejemplo es `ng g c nombreCarpeta/nombreComponente`  
+`ng g c components/img`
