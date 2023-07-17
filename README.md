@@ -26,3 +26,16 @@ otra alternativa es
 
 **Comando para ejecutar el proyecto de Angular e indicarle el puerto por el cual se requiere iniciar:**  
 `ng serve -o --port=3500`
+___
+
+## Curso de Angular Componentes y Servicios
+
+**Temas del curso:**
+
+- Componentes en Angular
+- Comunicación entre componentes
+- Ciclo de vida de un componente
+- Servicios en Angular
+- Inyección de dependencias
+- Consumo de datos provenientes de una API
+- Pipes y Directivas
