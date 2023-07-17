@@ -53,3 +53,6 @@ o en su forma corta
 `ng g c nombreComponente`  
 Para este proyecto el ejemplo es `ng g c nombreCarpeta/nombreComponente`  
 `ng g c components/img`
+
+Al crear el componente automaticamente se agrega a las configuraciones del archivo del proyecto llamado:  
+`app.module.ts`
