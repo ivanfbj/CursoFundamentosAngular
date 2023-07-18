@@ -59,3 +59,5 @@ que recibe como parámetro el valor que se le haya enviado.
 De esta manera, puedes ejecutar la lógica que necesites dentro de esta función cada vez que el valor del @Inputcambia.
 -->
 <h1>{{ img }}</h1>
+<!-- Debido a que el dato de img ya no es un texto sino una url, lo que se requiere es renderizar la imagen -->
+<img width="200" [src]="img" alt="" />
