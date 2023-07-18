@@ -160,7 +160,8 @@ export class AppComponent {
   }
   // Curso de Angular: Componentes y Servicios
   // Clase 3 - Uso de Inputs
-  imgPadre = 'https://www.w3schools.com/howto/img_avatar.png';
+  //URL de ejemplo https://www.w3schools.com/howto/img_avatar.png
+  imgPadre = '';
 
 }
 
