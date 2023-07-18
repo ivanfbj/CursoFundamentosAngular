@@ -158,6 +158,10 @@ export class AppComponent {
     console.log(this.register);
     window.alert('El usuario se a registrado exitosamente');
   }
+  // Curso de Angular: Componentes y Servicios
+  // Clase 3 - Uso de Inputs
+  imgPadre = 'Valor inicial en el componente padre app.component.ts';
+
 }
 
 

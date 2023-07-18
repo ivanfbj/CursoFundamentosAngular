@@ -4,7 +4,10 @@
 <!-- Descripción completa en img.component.html -->
 <!-- Al componente img.component.ts (app-img) se le enviará la información al hijo
 utilizando el nombre del atributo y pasandole el dato deseado -->
-<app-img img ="este valor viene desde el padre app.component.html"></app-img>
+<!-- En este caso se crea un input que captura el dato en una variable llamada "imgPadre" del componente padre
+y luego se le envia por el property binding al componente hijo osea al "app-img" -->
+<p><input type="text" [(ngModel)]="imgPadre" /></p>
+<app-img [img] ="imgPadre"></app-img>
 
 <hr />
 <h2>Curso de Angular: Componentes y Servicios</h2>
