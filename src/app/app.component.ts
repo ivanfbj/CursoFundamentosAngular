@@ -165,8 +165,9 @@ export class AppComponent {
 
   // Curso de Angular: Componentes y Servicios
   // Clase 4 - Uso de Outputs
-  onLoaded() {
-    console.log('Log padre app.component')
+  // Se crea el parametro de entrada el cual sería el evento que transmite el hijo al componente padre.
+  onLoaded(img: string) {
+    console.log('Log padre app.component: ' + img)
   }
 
 }

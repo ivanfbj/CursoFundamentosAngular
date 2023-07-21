@@ -13,8 +13,9 @@ A partir de la emisión de un evento, el decorador @Output() permite enviar mens
 que se le colocó a la variable de "Output" desde el archivo "img.component.ts" en este caso "(loaded)"
 y luego se le debe indicar cual es el evento que va a activar en el componente padre "app.component.ts", en este caso "img.component.ts" en este caso
 el evento "onLoaded"-->
+<!-- Para que el padre sepa que va a recibir un parametro del hijo, se le debe indicar que va a recibir un $event -->
 <p><input type="text" [(ngModel)]="imgPadre" /></p>
-<app-img (loaded)="onLoaded()" [img] ="imgPadre"></app-img>
+<app-img (loaded)="onLoaded($event)" [img] ="imgPadre"></app-img>
 
 
 <hr />

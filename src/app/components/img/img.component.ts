@@ -17,7 +17,8 @@ export class ImgComponent implements OnInit {
   /*Para configurar que el componente hijo comunique la información con el componente padre
     se requiere de hacer uso de "Output" y también se requiere el "EventEmitter" que es una forma enviar el Output y enviarlo al padre.
    */
-  @Output() loaded = new EventEmitter();
+  // En el componente se indica que va a transmitir información indicandole de que tipo, en este caso <string>
+  @Output() loaded = new EventEmitter<string>();
 
   constructor() { }
 
@@ -40,7 +41,8 @@ export class ImgComponent implements OnInit {
   imgLoaded() {
     console.log('Log del componente hijo, img.component.')
     // Con la siguiente linea se indica de que este Evento se va a imitir para poder enviar información al padre.
-    this.loaded.emit();
+    // En este caso, si la imagen cargó se transmité la URL de la imagen
+    this.loaded.emit(this.img);
   }
 
 }
