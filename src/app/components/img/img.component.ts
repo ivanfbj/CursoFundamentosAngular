@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-img',
@@ -14,6 +14,10 @@ export class ImgComponent implements OnInit {
     por lo cual el atributo "img" se le cambiará el valor por el que se le envíe desde el padre (app.component.html)
   */
   @Input() img: string = 'valor init'
+  /*Para configurar que el componente hijo comunique la información con el componente padre
+    se requiere de hacer uso de "Output" y también se requiere el "EventEmitter" que es una forma enviar el Output y enviarlo al padre.
+   */
+  @Output() loaded = new EventEmitter();
 
   constructor() { }
 
@@ -30,6 +34,13 @@ export class ImgComponent implements OnInit {
   */
   imgError() {
     this.img = this.imageDefault;
+  }
+
+  //  Se implementa el Event Binding para validar si la imagen fue cargada correctamente con el evento "(load)"
+  imgLoaded() {
+    console.log('Log del componente hijo, img.component.')
+    // Con la siguiente linea se indica de que este Evento se va a imitir para poder enviar información al padre.
+    this.loaded.emit();
   }
 
 }

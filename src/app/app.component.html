@@ -9,8 +9,12 @@ Comunicación hijo a padre
 A partir de la emisión de un evento, el decorador @Output() permite enviar mensajes desde un componente hijo hacia el padre.
 -->
 
+<!-- El event Bindind nos sirve para nuestros propios componentes, se le debe colocar el mismo nombre
+que se le colocó a la variable de "Output" desde el archivo "img.component.ts" en este caso "(loaded)"
+y luego se le debe indicar cual es el evento que va a activar en el componente padre "app.component.ts", en este caso "img.component.ts" en este caso
+el evento "onLoaded"-->
 <p><input type="text" [(ngModel)]="imgPadre" /></p>
-<app-img [img] ="imgPadre"></app-img>
+<app-img (loaded)="onLoaded()" [img] ="imgPadre"></app-img>
 
 
 <hr />

@@ -163,6 +163,12 @@ export class AppComponent {
   //URL de ejemplo https://www.w3schools.com/howto/img_avatar.png
   imgPadre = '';
 
+  // Curso de Angular: Componentes y Servicios
+  // Clase 4 - Uso de Outputs
+  onLoaded() {
+    console.log('Log padre app.component')
+  }
+
 }
 
 
