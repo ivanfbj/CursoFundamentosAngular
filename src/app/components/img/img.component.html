@@ -1,5 +1,25 @@
 <p>img works!</p>
 
+
+<!-- Curso de Angular: Componentes y Servicios -->
+<!-- Clase 4 - Uso de Outputs -->
+<!-- Así como el decorador @Input permite el envío de información desde un componente padre hacia un componente hijo,
+el uso de @Outputs permite lo contrario.
+
+Comunicación hijo a padre
+A partir de la emisión de un evento, el decorador @Output() permite enviar mensajes desde un componente hijo hacia el padre.
+-->
+<!-- Se utiliza el Event Bindind para validar si la imagen tiene una carga erronea
+con el eventyo "(error)"
+-->
+
+<h1>{{ img }}</h1>
+<img width="100" (error)="imgError()" [src]="img" *ngIf="img; else elseImg">
+<ng-template #elseImg>
+  <img width="500" [src]="imageDefault" alt="">
+</ng-template>
+
+
 <!-- Curso de Angular: Componentes y Servicios -->
 <!-- Clase 3 - Uso de Inputs -->
 <!-- Para comunicar componentes, Angular hace uso de decoradores para intercambiar
@@ -58,10 +78,11 @@ que recibe como parámetro el valor que se le haya enviado.
 
 De esta manera, puedes ejecutar la lógica que necesites dentro de esta función cada vez que el valor del @Inputcambia.
 -->
-<h1>{{ img }}</h1>
+<!-- <h1>{{ img }}</h1> -->
 <!-- Debido a que el dato de img ya no es un texto sino una url, lo que se requiere es renderizar la imagen -->
 <!-- Se implmenta una condición donde si la IMAGEN es vacia entonce me muestra una imagen por defecto -->
-<img width="200" [src]="img" *ngIf="img; else elseImg">
+
+<!-- <img width="200" [src]="img" *ngIf="img; else elseImg">
 <ng-template #elseImg>
   <img src="./assets/images/default.jpg" alt="">
-</ng-template>
+</ng-template> -->

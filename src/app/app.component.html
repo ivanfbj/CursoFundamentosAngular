@@ -1,5 +1,20 @@
 <hr />
 <h2>Curso de Angular: Componentes y Servicios</h2>
+<h3>Clase 4 - Uso de Outputs</h3>
+<!--
+Así como el decorador @Input permite el envío de información desde un componente padre hacia un componente hijo,
+el uso de @Outputs permite lo contrario.
+
+Comunicación hijo a padre
+A partir de la emisión de un evento, el decorador @Output() permite enviar mensajes desde un componente hijo hacia el padre.
+-->
+
+<p><input type="text" [(ngModel)]="imgPadre" /></p>
+<app-img [img] ="imgPadre"></app-img>
+
+
+<hr />
+<h2>Curso de Angular: Componentes y Servicios</h2>
 <h3>Clase 3 - Uso de Inputs</h3>
 <!-- Descripción completa en img.component.html -->
 <!-- Al componente img.component.ts (app-img) se le enviará la información al hijo

@@ -20,5 +20,16 @@ export class ImgComponent implements OnInit {
   ngOnInit(): void {
 
   }
+  // Curso de Angular: Componentes y Servicios
+  //  Clase 4 - Uso de Outputs
+  imageDefault = './assets/images/default.jpg';
+
+  /*
+    Si el elemento "<img width="200" (error)="imgError()" [src]="img" *ngIf="img; else elseImg">"
+    del HTML genera error me traera esta función de "imgError"
+  */
+  imgError() {
+    this.img = this.imageDefault;
+  }
 
 }
